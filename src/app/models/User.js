@@ -4,13 +4,9 @@ class User extends Model {
   static init(sequelize) {
     super.init(
       {
+        id: Sequelize.STRING,
         email: Sequelize.STRING,
-        password: Sequelize.STRING,
-        name: Sequelize.STRING,
-        gender: Sequelize.STRING,
-        birth: Sequelize.DATE,
         score: Sequelize.INTEGER,
-        programs: Sequelize.ARRAY(Sequelize.RANGE(Sequelize.INTEGER)),
       },
       {
         sequelize,

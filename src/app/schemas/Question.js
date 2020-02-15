@@ -6,6 +6,14 @@ const QuestionSchema = new mongoose.Schema(
       type: String,
       required: true,
     },
+    programId: {
+      type: Number,
+      required: true,
+    },
+    date: {
+      type: Date,
+      required: true,
+    },
     questions: [
       {
         content: {

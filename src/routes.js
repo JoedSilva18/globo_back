@@ -5,6 +5,7 @@ import UserController from './app/controllers/UserController';
 import QuestionAnswerController from './app/controllers/QuestionAnswerController';
 import QRCodeGeneratorController from './app/controllers/QRCodeGeneretorController';
 import ScoreController from './app/controllers/ScoreController';
+import ProgramUserController from './app/controllers/ProgramUserController';
 
 const routes = new Router();
 
@@ -30,5 +31,9 @@ routes.post('/storeUser', UserController.store);
 routes.get('/getUsers', UserController.index);
 // Adiciona pontos na conta do usuario
 routes.put('/addPoints/:id', ScoreController.update);
-
+// Adiciona um programa na lista de favoritos
+routes.put(
+  '/addProgram/:idUser/program/:idProgram',
+  ProgramUserController.update
+);
 export default routes;

@@ -1,5 +1,3 @@
-import Question from '../schemas/Question';
-
 class QRCodeGeneratorController {
   async show(req, res) {
     const { id } = req.params;

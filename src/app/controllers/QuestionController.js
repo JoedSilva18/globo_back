@@ -3,10 +3,12 @@ import QuestionAnswer from '../models/QuestionAnswer';
 
 class QuestionController {
   async store(req, res) {
-    const { formName, questions } = req.body;
+    const { formName, programId, date, questions } = req.body;
 
     const mongoQuestions = await Question.create({
       formName,
+      programId,
+      date,
       questions,
     });
 
