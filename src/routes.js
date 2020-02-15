@@ -4,6 +4,7 @@ import ProgramController from './app/controllers/ProgramController';
 import UserController from './app/controllers/UserController';
 import QuestionAnswerController from './app/controllers/QuestionAnswerController';
 import QRCodeGeneratorController from './app/controllers/QRCodeGeneretorController';
+import ScoreController from './app/controllers/ScoreController';
 
 const routes = new Router();
 
@@ -27,5 +28,7 @@ routes.get('/listProgramsById', ProgramController.show);
 routes.post('/storeUser', UserController.store);
 // Lista todos os usuarios
 routes.get('/getUsers', UserController.index);
+// Adiciona pontos na conta do usuario
+routes.put('/addPoints/:id', ScoreController.update);
 
 export default routes;
