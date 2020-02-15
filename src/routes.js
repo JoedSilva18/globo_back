@@ -1,6 +1,7 @@
 import { Router } from 'express';
 import QuestionController from './app/controllers/QuestionController';
 import ProgramController from './app/controllers/ProgramController';
+import UserController from './app/controllers/UserController';
 import QuestionAnswerController from './app/controllers/QuestionAnswerController';
 import QRCodeGeneratorController from './app/controllers/QRCodeGeneretorController';
 
@@ -22,5 +23,9 @@ routes.post('/storeProgram', ProgramController.store);
 routes.get('/listPrograms', ProgramController.index);
 // Lista todos os programas baseado em id's
 routes.get('/listProgramsById', ProgramController.show);
+// cria um usuario
+routes.post('/storeUser', UserController.store);
+// Lista todos os usuarios
+routes.get('/getUsers', UserController.index);
 
 export default routes;

@@ -3,8 +3,9 @@ import mongoose from 'mongoose';
 import databaseConfig from '../config/database';
 import QuestionAnswer from '../app/models/QuestionAnswer';
 import Program from '../app/models/Program';
+import User from '../app/models/User';
 
-const models = [QuestionAnswer, Program];
+const models = [QuestionAnswer, Program, User];
 
 class Database {
   constructor() {
