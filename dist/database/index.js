@@ -25,6 +25,7 @@ class Database {
     this.mongoConnection = _mongoose2.default.connect(process.env.MONGO_URI, {
       useNewUrlParser: true,
       useFindAndModify: true,
+      useUnifiedTopology: true,
     });
   }
 }

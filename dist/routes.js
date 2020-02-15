@@ -5,6 +5,7 @@ var _UserController = require('./app/controllers/UserController'); var _UserCont
 var _QuestionAnswerController = require('./app/controllers/QuestionAnswerController'); var _QuestionAnswerController2 = _interopRequireDefault(_QuestionAnswerController);
 var _QRCodeGeneretorController = require('./app/controllers/QRCodeGeneretorController'); var _QRCodeGeneretorController2 = _interopRequireDefault(_QRCodeGeneretorController);
 var _ScoreController = require('./app/controllers/ScoreController'); var _ScoreController2 = _interopRequireDefault(_ScoreController);
+var _FormController = require('./app/controllers/FormController'); var _FormController2 = _interopRequireDefault(_FormController);
 
 const routes = new (0, _express.Router)();
 
@@ -16,7 +17,9 @@ routes.get('/getQuestions', _QuestionController2.default.index);
 routes.get('/getAnswer/:idQuestion', _QuestionAnswerController2.default.show);
 // Busca uma questao aleatorio baseada no id do formulario
 routes.get('/getQuestion/:id', _QuestionController2.default.show);
-// Gera um endereco resposnavel por gerar o QRCode
+// Busca um formulario baseado no nome
+routes.get('/getQuestionByForm', _FormController2.default.show);
+// Gera um endereco responsavel por gerar o QRCode
 routes.get('/generateQRCode/:id', _QRCodeGeneretorController2.default.show);
 // Cria um novo programa
 routes.post('/storeProgram', _ProgramController2.default.store);
