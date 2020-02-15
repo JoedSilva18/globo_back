@@ -2,9 +2,9 @@ import Sequelize from 'sequelize';
 import mongoose from 'mongoose';
 import databaseConfig from '../config/database';
 import QuestionAnswer from '../app/models/QuestionAnswer';
-import Quiz from '../app/models/Quiz';
+import Program from '../app/models/Program';
 
-const models = [QuestionAnswer, Quiz];
+const models = [QuestionAnswer, Program];
 
 class Database {
   constructor() {

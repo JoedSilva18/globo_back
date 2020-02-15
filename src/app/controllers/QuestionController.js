@@ -36,6 +36,11 @@ class QuestionController {
 
     return res.json({ _id, content, alternatives });
   }
+
+  async index(req, res) {
+    const question = await Question.find({});
+    return res.json(question);
+  }
 }
 
 export default new QuestionController();

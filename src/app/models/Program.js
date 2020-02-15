@@ -1,10 +1,12 @@
 import Sequelize, { Model } from 'sequelize';
 
-class Quiz extends Model {
+class Program extends Model {
   static init(sequelize) {
     super.init(
       {
         name: Sequelize.STRING,
+        description: Sequelize.STRING,
+        schedule: Sequelize.STRING,
       },
       {
         sequelize,
@@ -15,4 +17,4 @@ class Quiz extends Model {
   }
 }
 
-export default Quiz;
+export default Program;
