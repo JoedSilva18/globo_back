@@ -1,8 +1,8 @@
 class QRCodeGeneratorController {
   async show(req, res) {
-    const { id } = req.params;
+    const { id, type } = req.params;
 
-    const uri = `http://localhost:3333/getQRCode/${id}`;
+    const uri = `https://globoapi.herokuapp.com/${type}/${id}`;
 
     return res.json({ qrcode: uri });
   }

@@ -33,9 +33,7 @@ routes.get('/getUsers', _UserController2.default.index);
 // Cria enquetes
 routes.post('/storeSurvey', _SurveyController2.default.store);
 // Busca enquetes pelo id do programa
-routes.get('/getSurvey/:programId', _SurveyController2.default.show);
-// Adiciona um voto na enquete
-routes.post('/vote', _SurveyAnswerController2.default.store);
+routes.get('/getSurveys/:programId', _SurveyController2.default.index);
 
 // Rotas Mobile //
 
@@ -51,5 +49,9 @@ routes.get('/getAnswer/:idQuestion', _QuestionAnswerController2.default.show);
 routes.put('/addPoints/:id', _ScoreController2.default.update);
 // Lista usuario por ID
 routes.get('/getUser/:id', _UserController2.default.show);
+// Adiciona um voto na enquete
+routes.post('/vote', _SurveyAnswerController2.default.store);
+// Busca enquete pelo id da enquete
+routes.get('/getSurvey/:surveyId', _SurveyController2.default.show);
 
 exports. default = routes;

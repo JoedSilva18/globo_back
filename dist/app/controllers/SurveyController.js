@@ -19,11 +19,21 @@ class SurveyController {
     return res.json(questionAnswers);
   }
 
-  async show(req, res) {
+  async index(req, res) {
     const { programId } = req.params;
 
-    const survey = await _Survey2.default.find({
+    const surveys = await _Survey2.default.find({
       programId,
+    });
+
+    return res.json(surveys);
+  }
+
+  async show(req, res) {
+    const { surveyId } = req.params;
+
+    const survey = await _Survey2.default.find({
+      id: surveyId,
     });
 
     return res.json(survey);
