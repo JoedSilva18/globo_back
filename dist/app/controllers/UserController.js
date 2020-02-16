@@ -2,7 +2,13 @@
 
 class UserController {
   async store(req, res) {
-    const user = await _User2.default.create(req.body);
+    const { id, name } = req.body;
+
+    const user = await _User2.default.create({
+      id,
+      name,
+      score: 0,
+    });
 
     return res.json(user);
   }
@@ -11,6 +17,13 @@ class UserController {
     const users = await _User2.default.findAll();
 
     return res.json(users);
+  }
+
+  async show(req, res) {
+    const { id } = req.params;
+    const user = await _User2.default.findByPk(id);
+
+    return res.json(user);
   }
 }
 

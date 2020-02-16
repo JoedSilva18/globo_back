@@ -3,11 +3,12 @@ var _QuestionAnswer = require('../models/QuestionAnswer'); var _QuestionAnswer2 
 
 class QuestionController {
   async store(req, res) {
-    const { formName, programId, date, questions } = req.body;
+    const { formName, programId, date, questions, points } = req.body;
 
     const mongoQuestions = await _Question2.default.create({
       formName,
       programId,
+      points,
       date,
       questions,
     });
@@ -32,15 +33,18 @@ class QuestionController {
 
     const { questions } = question[0];
 
-    const { _id, content, alternatives } = questions[
+    const { _id, content, alternatives, points } = questions[
       Math.floor(Math.random() * questions.length)
     ];
 
-    return res.json({ _id, content, alternatives });
+    return res.json({ _id, content, points, alternatives });
   }
 
   async index(req, res) {
-    const question = await _Question2.default.find({});
+    const { id } = req.params;
+    const question = await _Question2.default.find({
+      programId: id,
+    });
     return res.json(question);
   }
 }

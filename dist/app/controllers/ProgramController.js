@@ -12,15 +12,11 @@ class ProgramController {
   }
 
   async show(req, res) {
-    const { ids } = req.body;
+    const { id } = req.params;
 
-    const programs = await _Program2.default.findAll({
-      where: {
-        id: ids,
-      },
-    });
+    const program = await _Program2.default.findByPk(id);
 
-    return res.json(programs);
+    return res.json(program);
   }
 }
 

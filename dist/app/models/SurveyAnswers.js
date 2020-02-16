@@ -1,6 +1,6 @@
 "use strict"; function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }Object.defineProperty(exports, "__esModule", {value: true});var _sequelize = require('sequelize'); var _sequelize2 = _interopRequireDefault(_sequelize);
 
-class User extends _sequelize.Model {
+class SurvayAnswers extends _sequelize.Model {
   static init(sequelize) {
     super.init(
       {
@@ -8,11 +8,15 @@ class User extends _sequelize.Model {
           type: _sequelize2.default.STRING,
           primaryKey: true,
         },
-        name: _sequelize2.default.STRING,
-        score: _sequelize2.default.INTEGER,
+        alternativea: _sequelize2.default.INTEGER,
+        alternativeb: _sequelize2.default.INTEGER,
+        alternativec: _sequelize2.default.INTEGER,
+        alternatived: _sequelize2.default.INTEGER,
+        total: _sequelize2.default.INTEGER,
       },
       {
         sequelize,
+        tableName: 'survey_answers',
       }
     );
 
@@ -20,4 +24,4 @@ class User extends _sequelize.Model {
   }
 }
 
-exports. default = User;
+exports. default = SurvayAnswers;

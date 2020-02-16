@@ -4,8 +4,9 @@ var _database = require('../config/database'); var _database2 = _interopRequireD
 var _QuestionAnswer = require('../app/models/QuestionAnswer'); var _QuestionAnswer2 = _interopRequireDefault(_QuestionAnswer);
 var _Program = require('../app/models/Program'); var _Program2 = _interopRequireDefault(_Program);
 var _User = require('../app/models/User'); var _User2 = _interopRequireDefault(_User);
+var _SurveyAnswers = require('../app/models/SurveyAnswers'); var _SurveyAnswers2 = _interopRequireDefault(_SurveyAnswers);
 
-const models = [_QuestionAnswer2.default, _Program2.default, _User2.default];
+const models = [_QuestionAnswer2.default, _Program2.default, _User2.default, _SurveyAnswers2.default];
 
 class Database {
   constructor() {
