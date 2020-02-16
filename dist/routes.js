@@ -21,7 +21,7 @@ routes.get('/getQuestions/:id', _QuestionController2.default.index);
 // Busca um formulario baseado no nome
 routes.get('/getQuestionByForm', _FormController2.default.show);
 // Gera um endereco responsavel por gerar o QRCode
-routes.get('/generateQRCode/:id', _QRCodeGeneretorController2.default.show);
+routes.get('/generateQRCode/:type/:id', _QRCodeGeneretorController2.default.show);
 // Cria um novo programa
 routes.post('/storeProgram', _ProgramController2.default.store);
 // Lista todos os programas
