@@ -32,6 +32,8 @@ routes.get('/getProgram/:id', _ProgramController2.default.show);
 routes.get('/getUsers', _UserController2.default.index);
 // Cria enquetes
 routes.post('/storeSurvey', _SurveyController2.default.store);
+// Busca enquetes pelo id do programa
+routes.get('/getSurvey/:programId', _SurveyController2.default.show);
 // Adiciona um voto na enquete
 routes.post('/vote', _SurveyAnswerController2.default.store);
 

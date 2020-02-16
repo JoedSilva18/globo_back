@@ -18,6 +18,16 @@ class SurveyController {
 
     return res.json(questionAnswers);
   }
+
+  async show(req, res) {
+    const { programId } = req.params;
+
+    const survey = await Survey.find({
+      programId,
+    });
+
+    return res.json(survey);
+  }
 }
 
 export default new SurveyController();
