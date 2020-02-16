@@ -7,6 +7,8 @@ import QRCodeGeneratorController from './app/controllers/QRCodeGeneretorControll
 import ScoreController from './app/controllers/ScoreController';
 import FormController from './app/controllers/FormController';
 import SessionController from './app/controllers/SessionController';
+import SurveyController from './app/controllers/SurveyController';
+import SurveyAnswerController from './app/controllers/SurveyAnswerController';
 
 const routes = new Router();
 
@@ -28,6 +30,10 @@ routes.get('/listPrograms', ProgramController.index);
 routes.get('/getProgram/:id', ProgramController.show);
 // Lista todos os usuarios
 routes.get('/getUsers', UserController.index);
+// Cria enquetes
+routes.post('/storeSurvey', SurveyController.store);
+// Adiciona um voto na enquete
+routes.post('/vote', SurveyAnswerController.store);
 
 // Rotas Mobile //
 
