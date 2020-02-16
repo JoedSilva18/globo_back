@@ -3,11 +3,12 @@ import QuestionAnswer from '../models/QuestionAnswer';
 
 class QuestionController {
   async store(req, res) {
-    const { formName, programId, date, questions } = req.body;
+    const { formName, programId, date, questions, points } = req.body;
 
     const mongoQuestions = await Question.create({
       formName,
       programId,
+      points,
       date,
       questions,
     });
@@ -32,11 +33,11 @@ class QuestionController {
 
     const { questions } = question[0];
 
-    const { _id, content, alternatives } = questions[
+    const { _id, content, alternatives, points } = questions[
       Math.floor(Math.random() * questions.length)
     ];
 
-    return res.json({ _id, content, alternatives });
+    return res.json({ _id, content, points, alternatives });
   }
 
   async index(req, res) {

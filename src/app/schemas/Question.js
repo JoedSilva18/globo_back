@@ -14,6 +14,10 @@ const QuestionSchema = new mongoose.Schema(
       type: Date,
       required: true,
     },
+    points: {
+      type: Number,
+      required: true,
+    },
     questions: [
       {
         content: {

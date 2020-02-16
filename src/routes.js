@@ -39,5 +39,7 @@ routes.get('/getQuestion/:id', QuestionController.show);
 routes.get('/getAnswer/:idQuestion', QuestionAnswerController.show);
 // Adiciona pontos na conta do usuario
 routes.put('/addPoints/:id', ScoreController.update);
+// Lista usuario por ID
+routes.get('/getUser/:id', UserController.show);
 
 export default routes;
