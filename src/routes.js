@@ -15,7 +15,7 @@ const routes = new Router();
 // Salvar a pergunta
 routes.post('/storeQuestion', QuestionController.store);
 // Exibir perguntas
-routes.get('/getQuestions', QuestionController.index);
+routes.get('/getQuestions/:id', QuestionController.index);
 // Busca um formulario baseado no nome
 routes.get('/getQuestionByForm', FormController.show);
 // Gera um endereco responsavel por gerar o QRCode

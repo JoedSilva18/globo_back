@@ -41,7 +41,10 @@ class QuestionController {
   }
 
   async index(req, res) {
-    const question = await Question.find({});
+    const { id } = req.params;
+    const question = await Question.find({
+      programId: id
+    });
     return res.json(question);
   }
 }
