@@ -8,7 +8,7 @@ class User extends Model {
           type: Sequelize.STRING,
           primaryKey: true,
         },
-        email: Sequelize.STRING,
+        name: Sequelize.STRING,
         score: Sequelize.INTEGER,
       },
       {
