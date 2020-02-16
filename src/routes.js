@@ -24,6 +24,8 @@ routes.get('/generateQRCode/:id', QRCodeGeneratorController.show);
 routes.post('/storeProgram', ProgramController.store);
 // Lista todos os programas
 routes.get('/listPrograms', ProgramController.index);
+// Busca programa por ID
+routes.get('/getProgram/:id', ProgramController.show);
 // Lista todos os usuarios
 routes.get('/getUsers', UserController.index);
 

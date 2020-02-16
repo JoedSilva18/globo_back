@@ -7,6 +7,7 @@ class Program extends Model {
         name: Sequelize.STRING,
         description: Sequelize.STRING,
         schedule: Sequelize.STRING,
+        uri: Sequelize.STRING,
       },
       {
         sequelize,
