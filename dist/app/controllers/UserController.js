@@ -15,7 +15,7 @@ class UserController {
 
   async index(req, res) {
     const users = await _User2.default.findAll({
-      order: ['score', 'DESC'],
+      order: [['score', 'DESC']],
     });
 
     return res.json(users);
