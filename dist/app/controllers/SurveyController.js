@@ -33,7 +33,7 @@ class SurveyController {
     const { surveyId } = req.params;
 
     const survey = await _Survey2.default.find({
-      id: surveyId,
+      _id: surveyId,
     });
 
     return res.json(survey);
