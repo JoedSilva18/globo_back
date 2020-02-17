@@ -8,6 +8,7 @@ class Program extends _sequelize.Model {
         description: _sequelize2.default.STRING,
         schedule: _sequelize2.default.STRING,
         uri: _sequelize2.default.STRING,
+        background: _sequelize2.default.STRING,
       },
       {
         sequelize,
