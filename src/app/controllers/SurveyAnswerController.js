@@ -9,30 +9,16 @@ class SurveyAnswerController {
     if (survey) {
       switch (index) {
         case 1: {
-          const { alternativea } = survey;
+          const { yes } = survey;
           await survey.update({
-            alternativea: alternativea + 1,
+            alternativea: yes + 1,
           });
           break;
         }
         case 2: {
-          const { alternativeb } = survey;
+          const { no } = survey;
           await survey.update({
-            alternativeb: alternativeb + 1,
-          });
-          break;
-        }
-        case 3: {
-          const { alternativec } = survey;
-          await survey.update({
-            alternativec: alternativec + 1,
-          });
-          break;
-        }
-        case 4: {
-          const { alternatived } = survey;
-          await survey.update({
-            alternatived: alternatived + 1,
+            alternativeb: no + 1,
           });
           break;
         }

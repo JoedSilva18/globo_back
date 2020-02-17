@@ -8,10 +8,8 @@ class SurvayAnswers extends Model {
           type: Sequelize.STRING,
           primaryKey: true,
         },
-        alternativea: Sequelize.INTEGER,
-        alternativeb: Sequelize.INTEGER,
-        alternativec: Sequelize.INTEGER,
-        alternatived: Sequelize.INTEGER,
+        yes: Sequelize.INTEGER,
+        no: Sequelize.INTEGER,
         total: Sequelize.INTEGER,
       },
       {
