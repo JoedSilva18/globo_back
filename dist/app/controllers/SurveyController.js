@@ -9,10 +9,8 @@ class SurveyController {
 
     const questionAnswers = await _SurveyAnswers2.default.create({
       id,
-      alternativea: 0,
-      alternativeb: 0,
-      alternativec: 0,
-      alternatived: 0,
+      yes: 0,
+      no: 0,
       total: 0,
     });
 

@@ -6,19 +6,11 @@
         allowNull: false,
         primaryKey: true,
       },
-      alternativea: {
+      yes: {
         type: Sequelize.INTEGER,
         allowNull: false,
       },
-      alternativeb: {
-        type: Sequelize.INTEGER,
-        allowNull: false,
-      },
-      alternativec: {
-        type: Sequelize.INTEGER,
-        allowNull: false,
-      },
-      alternatived: {
+      no: {
         type: Sequelize.INTEGER,
         allowNull: false,
       },
