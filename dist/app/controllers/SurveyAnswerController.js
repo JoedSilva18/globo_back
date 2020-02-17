@@ -46,6 +46,14 @@ class SurveyAnswerController {
 
     return res.json(surveyUpdated);
   }
+
+  async show(req, res) {
+    const { id } = req.params;
+
+    const survey = await _SurveyAnswers2.default.findByPk(id);
+
+    return res.json(survey);
+  }
 }
 
 exports. default = new SurveyAnswerController();

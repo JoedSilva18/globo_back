@@ -51,6 +51,8 @@ routes.put('/addPoints/:id', _ScoreController2.default.update);
 routes.get('/getUser/:id', _UserController2.default.show);
 // Adiciona um voto na enquete
 routes.post('/vote', _SurveyAnswerController2.default.store);
+// Buscar resultado da votacao
+routes.get('/getVotes/:id', _SurveyAnswerController2.default.show);
 // Busca enquete pelo id da enquete
 routes.get('/getSurvey/:surveyId', _SurveyController2.default.show);
 
