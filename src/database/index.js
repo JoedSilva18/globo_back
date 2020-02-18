@@ -5,8 +5,9 @@ import QuestionAnswer from '../app/models/QuestionAnswer';
 import Program from '../app/models/Program';
 import User from '../app/models/User';
 import SurvayAnswers from '../app/models/SurveyAnswers';
+import QRView from '../app/models/QRView';
 
-const models = [QuestionAnswer, Program, User, SurvayAnswers];
+const models = [QuestionAnswer, Program, User, SurvayAnswers, QRView];
 
 class Database {
   constructor() {

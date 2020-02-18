@@ -9,6 +9,7 @@ import FormController from './app/controllers/FormController';
 import SessionController from './app/controllers/SessionController';
 import SurveyController from './app/controllers/SurveyController';
 import SurveyAnswerController from './app/controllers/SurveyAnswerController';
+import QRViewController from './app/controllers/QRViewController';
 
 const routes = new Router();
 
@@ -55,5 +56,7 @@ routes.post('/vote', SurveyAnswerController.store);
 routes.get('/getVotes/:id', SurveyAnswerController.show);
 // Busca enquete pelo id da enquete
 routes.get('/getSurvey/:surveyId', SurveyController.show);
+// Busca uri do QRCode
+routes.get('/getQRCode/:id', QRViewController.show);
 
 export default routes;

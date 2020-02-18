@@ -5,8 +5,9 @@ var _QuestionAnswer = require('../app/models/QuestionAnswer'); var _QuestionAnsw
 var _Program = require('../app/models/Program'); var _Program2 = _interopRequireDefault(_Program);
 var _User = require('../app/models/User'); var _User2 = _interopRequireDefault(_User);
 var _SurveyAnswers = require('../app/models/SurveyAnswers'); var _SurveyAnswers2 = _interopRequireDefault(_SurveyAnswers);
+var _QRView = require('../app/models/QRView'); var _QRView2 = _interopRequireDefault(_QRView);
 
-const models = [_QuestionAnswer2.default, _Program2.default, _User2.default, _SurveyAnswers2.default];
+const models = [_QuestionAnswer2.default, _Program2.default, _User2.default, _SurveyAnswers2.default, _QRView2.default];
 
 class Database {
   constructor() {

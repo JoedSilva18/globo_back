@@ -9,6 +9,7 @@ var _FormController = require('./app/controllers/FormController'); var _FormCont
 var _SessionController = require('./app/controllers/SessionController'); var _SessionController2 = _interopRequireDefault(_SessionController);
 var _SurveyController = require('./app/controllers/SurveyController'); var _SurveyController2 = _interopRequireDefault(_SurveyController);
 var _SurveyAnswerController = require('./app/controllers/SurveyAnswerController'); var _SurveyAnswerController2 = _interopRequireDefault(_SurveyAnswerController);
+var _QRViewController = require('./app/controllers/QRViewController'); var _QRViewController2 = _interopRequireDefault(_QRViewController);
 
 const routes = new (0, _express.Router)();
 
@@ -55,5 +56,7 @@ routes.post('/vote', _SurveyAnswerController2.default.store);
 routes.get('/getVotes/:id', _SurveyAnswerController2.default.show);
 // Busca enquete pelo id da enquete
 routes.get('/getSurvey/:surveyId', _SurveyController2.default.show);
+// Busca uri do QRCode
+routes.get('/getQRCode/:id', _QRViewController2.default.show);
 
 exports. default = routes;

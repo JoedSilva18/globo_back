@@ -1,10 +1,20 @@
 class QRCodeGeneratorController {
-  async show(req, res) {
+  show(req, res) {
     const { id, type } = req.params;
 
-    const uri = `https://globoapi.herokuapp.com/${type}/${id}`;
+    if (type === 'quiz') {
+      return res.json({ idQuiz: parseInt(id), idEnq: null, url: null });
+    }
 
-    return res.json({ qrcode: uri });
+    if (type === 'enquete') {
+      return res.json({ idQuiz: null, idEnq: parseInt(id), url: null });
+    }
+
+    if (type === 'url') {
+      return res.json({ idQuiz: null, idEnq: null, url: parseInt(id) });
+    }
+
+    return res.json({ mensagem: 'error' });
   }
 }
 
