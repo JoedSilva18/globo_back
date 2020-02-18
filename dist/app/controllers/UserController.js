@@ -2,7 +2,7 @@
 
 class UserController {
   async store(req, res) {
-    const { id, name } = req.body;
+    const { id, name, score } = req.body;
 
     const user = await _User2.default.create({
       id,
