@@ -2,7 +2,7 @@ import User from '../models/User';
 
 class UserController {
   async store(req, res) {
-    const { id, name } = req.body;
+    const { id, name, score } = req.body;
 
     const user = await User.create({
       id,
