@@ -57,6 +57,6 @@ routes.get('/getVotes/:id', SurveyAnswerController.show);
 // Busca enquete pelo id da enquete
 routes.get('/getSurvey/:surveyId', SurveyController.show);
 // Busca uri do QRCode
-routes.get('/getQRCode/:id', QRViewController.show);
+routes.get('/getURI/:id', QRViewController.show);
 
 export default routes;

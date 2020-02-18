@@ -33,11 +33,21 @@ class QuestionController {
 
     const { questions } = question[0];
 
-    const { _id, content, alternatives, points } = questions[
-      Math.floor(Math.random() * questions.length)
-    ];
-
-    return res.json({ _id, content, points, alternatives });
+    const {
+      _id,
+      content,
+      alternatives,
+      points,
+      questionAnswerIndex,
+    } = questions[Math.floor(Math.random() * questions.length)];
+    console.log(points);
+    return res.json({
+      _id,
+      points,
+      content,
+      alternatives,
+      questionAnswerIndex,
+    });
   }
 
   async index(req, res) {
