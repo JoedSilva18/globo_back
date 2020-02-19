@@ -34,7 +34,7 @@ class SurveyController {
       _id: surveyId,
     });
 
-    return res.json(survey);
+    return res.json(survey[0]);
   }
 }
 
