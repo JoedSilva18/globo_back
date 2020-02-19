@@ -11,14 +11,14 @@ class SurveyAnswerController {
         case 1: {
           const { yes } = survey;
           await survey.update({
-            alternativea: yes + 1,
+            yes: yes + 1,
           });
           break;
         }
         case 2: {
           const { no } = survey;
           await survey.update({
-            alternativeb: no + 1,
+            no: no + 1,
           });
           break;
         }
@@ -26,6 +26,7 @@ class SurveyAnswerController {
       }
     }
     const { total } = survey;
+
     const surveyUpdated = await survey.update({
       total: total + 1,
     });
